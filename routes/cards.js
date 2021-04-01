@@ -5,6 +5,11 @@ const auth = require("../middleware/auth");
 const { Router } = require("express");
 const router = express.Router();
 
+router.get('/all-cards', async (req,res) => {
+
+    const cards = await Card.find();
+    res.send(cards);
+});
 router.get('/my-cards', auth, async (req,res) => {
 
     if( ! req.user.biz ) return res.status(401).send('Access denied.');

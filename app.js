@@ -8,7 +8,7 @@ const auth = require("./routes/auth");
 const cards = require("./routes/cards");
 
 
-mongoose.connect('mongodb+srv://admin:Badran00@cluster0.lnrsf.mongodb.net/test',{
+mongoose.connect('mongodb://localhost/my_rest_api', {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useFindAndModify: false,
